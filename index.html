@@ -1,0 +1,259 @@
+<!--
+
+	To add in the <head> :
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css">
+
+-->
+<aside class="sg-aside js-sg-menu">
+	<div class="sg-aside__overflow">
+		<!-- Aside Header -->
+		<div class="sg-aside__header">
+			<a href="#" title="">
+				<!-- logo borrowed from Codepen for the proto -->
+				<svg class="sg-logo" viewBox="0 0 100 100"><path d="M100 34.2c-.4-2.6-3.3-4-5.3-5.3-3.6-2.4-7.1-4.7-10.7-7.1-8.5-5.7-17.1-11.4-25.6-17.1-2-1.3-4-2.7-6-4-1.4-1-3.3-1-4.8 0-5.7 3.8-11.5 7.7-17.2 11.5L5.2 29C3 30.4.1 31.8 0 34.8c-.1 3.3 0 6.7 0 10v16c0 2.9-.6 6.3 2.1 8.1 6.4 4.4 12.9 8.6 19.4 12.9 8 5.3 16 10.7 24 16 2.2 1.5 4.4 3.1 7.1 1.3 2.3-1.5 4.5-3 6.8-4.5 8.9-5.9 17.8-11.9 26.7-17.8l9.9-6.6c.6-.4 1.3-.8 1.9-1.3 1.4-1 2-2.4 2-4.1V37.3c.1-1.1.2-2.1.1-3.1 0-.1 0 .2 0 0zM54.3 12.3L88 34.8 73 44.9 54.3 32.4V12.3zm-8.6 0v20L27.1 44.8 12 34.8l33.7-22.5zM8.6 42.8L19.3 50 8.6 57.2V42.8zm37.1 44.9L12 65.2l15-10.1 18.6 12.5v20.1zM50 60.2L34.8 50 50 39.8 65.2 50 50 60.2zm4.3 27.5v-20l18.6-12.5 15 10.1-33.6 22.4zm37.1-30.5L80.7 50l10.8-7.2-.1 14.4z"></path></svg>
+			</a>
+			<div class="sg-sublogo">Styleguide</div>
+		</div>
+		<!-- Aside navigation -->
+		<ul id="sg-navbar" class="sg-aside__nav">
+			<li>
+				<a role="button" data-toggle="collapse" data-parent="#sg-navbar" href="#sg-navbar-part0" title="collapse" class="open">
+					Overview
+					<svg width="8" height="4" viewBox="0 0 8 4" class="collapse-caret"><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z" ></path></svg>
+				</a>
+				<ul id="sg-navbar-part0" class="sg-aside__subnav collapse in">
+					<li class="active">
+						<a href="#sg-introduction" title="introduction" data-toggle="tab" class="sg-aside__tab-trigger">Introduction</a>
+					</li>
+					<li>
+						<a href="#sg-code-guidelines" title="code guidelines" data-toggle="tab" class="sg-aside__tab-trigger">Code guidelines</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a role="button" data-toggle="collapse" data-parent="#sg-navbar" href="#sg-navbar-part1" title="collapse">
+					Grids
+					<svg width="8" height="4" viewBox="0 0 8 4" class="collapse-caret"><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z" ></path></svg>
+				</a>
+				<ul id="sg-navbar-part1" class="sg-aside__subnav collapse">
+					<li>
+						<a href="#sg-no-grid" title="no grid" data-toggle="tab" class="sg-aside__tab-trigger">No grid</a>
+					</li>
+					<li>
+						<a href="#sg-basic-grid" title="basic grid" data-toggle="tab" class="sg-aside__tab-trigger">Basic grid</a>
+					</li>
+					<li>
+						<a href="#sg-content-grid" title="content grid" data-toggle="tab" class="sg-aside__tab-trigger">Content grid</a>
+					</li>
+					<li>
+						<a href="#sg-split-grid" title="split grid" data-toggle="tab" class="sg-aside__tab-trigger">Split grid</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a role="button" data-toggle="collapse" data-parent="#sg-navbar" href="#sg-navbar-part2" title="collapse">
+					Typography
+					<svg width="8" height="4" viewBox="0 0 8 4" class="collapse-caret"><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z" ></path></svg>
+				</a>
+				<ul id="sg-navbar-part2" class="sg-aside__subnav collapse">
+					<li>
+						<a href="#sg-headings" title="headingd" data-toggle="tab" class="sg-aside__tab-trigger">Headings</a>
+					</li>
+					<li>
+						<a href="#sg-texts" title="texts" data-toggle="tab" class="sg-aside__tab-trigger">Texts</a>
+					</li>
+					<li>
+						<a href="#sg-links-highlights" title="Links and highlights" data-toggle="tab" class="sg-aside__tab-trigger">Links and highlights</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a role="button" data-toggle="collapse" data-parent="#sg-navbar" href="#sg-navbar-part3" title="collapse">
+					Buttons
+					<svg width="8" height="4" viewBox="0 0 8 4" class="collapse-caret"><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z" ></path></svg>
+				</a>
+				<ul id="sg-navbar-part3" class="sg-aside__subnav collapse">
+					<li>
+						<a href="#sg-basic-buttons" title="basic buttons" data-toggle="tab" class="sg-aside__tab-trigger">Basic buttons</a>
+					</li>
+					<li>
+						<a href="#sg-rounded-buttons" title="rounded buttons" data-toggle="tab" class="sg-aside__tab-trigger">Rounded buttons</a>
+					</li>
+					<li>
+						<a href="#sg-tab-buttons" title="tab buttons" data-toggle="tab" class="sg-aside__tab-trigger">Tab-buttons</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a role="button" data-toggle="collapse" data-parent="#sg-navbar" href="#sg-navbar-part4" title="collapse">
+					Forms
+					<svg width="8" height="4" viewBox="0 0 8 4" class="collapse-caret"><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z" ></path></svg>
+				</a>
+				<ul id="sg-navbar-part4" class="sg-aside__subnav collapse">
+					<li>
+						<a href="#sg-text-inputs" title="Text inputs" data-toggle="tab" class="sg-aside__tab-trigger">Text inputs</a>
+					</li>
+					<li>
+						<a href="#sg-select" title="Select" data-toggle="tab" class="sg-aside__tab-trigger">Select</a>
+					</li>
+					<li>
+						<a href="#sg-textarea" title="Textarea" data-toggle="tab" class="sg-aside__tab-trigger">Textarea</a>
+					</li>
+					<li>
+						<a href="#sg-checkboxes-radio" title="Checkboxes and Radio inputs" data-toggle="tab" class="sg-aside__tab-trigger">Checkboxes and Radio inputs</a>
+					</li>
+					<li>
+						<a href="#sg-file-input" title="File input" data-toggle="tab" class="sg-aside__tab-trigger">File input</a>
+					</li>
+					<li>
+						<a href="#sg-error-messages" title="Error messages" data-toggle="tab" class="sg-aside__tab-trigger">Error messages</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a role="button" data-toggle="collapse" data-parent="#sg-navbar" href="#sg-navbar-part5" title="collapse">
+					Test
+					<svg width="8" height="4" viewBox="0 0 8 4" class="collapse-caret"><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z" ></path></svg>
+				</a>
+				<ul id="sg-navbar-part5" class="sg-aside__subnav collapse">
+					<li>
+						<a href="#sg-test" title="test" data-toggle="tab" class="sg-aside__tab-trigger">Test</a>
+					</li>
+					<li>
+						<a href="#sg-test" title="test" data-toggle="tab" class="sg-aside__tab-trigger">Test</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a role="button" data-toggle="collapse" data-parent="#sg-navbar" href="#sg-navbar-part6" title="collapse">
+					Test
+					<svg width="8" height="4" viewBox="0 0 8 4" class="collapse-caret"><path d="M7.76,1L4.46,3.84a0.73,0.73,0,0,1-.92,0L0.24,1A0.56,0.56,0,0,1,.1.24,0.55,0.55,0,0,1,.7,0H7.3A0.55,0.55,0,0,1,8,.41,0.56,0.56,0,0,1,7.76,1Z" ></path></svg>
+				</a>
+				<ul id="sg-navbar-part6" class="sg-aside__subnav collapse">
+					<li>
+						<a href="#sg-test" title="test" data-toggle="tab" class="sg-aside__tab-trigger">Test</a>
+					</li>
+					<li>
+						<a href="#sg-test" title="test" data-toggle="tab" class="sg-aside__tab-trigger">Test</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</aside>
+
+<!-- Mobile header -->
+<div class="sg-mobile-header">
+	<div class="sg-menu-burger js-sg-menu-trigger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<a href="#" title="">
+		<!-- logo borrowed from Codepen for the proto -->
+		<svg class="sg-logo" viewBox="0 0 100 100"><path d="M100 34.2c-.4-2.6-3.3-4-5.3-5.3-3.6-2.4-7.1-4.7-10.7-7.1-8.5-5.7-17.1-11.4-25.6-17.1-2-1.3-4-2.7-6-4-1.4-1-3.3-1-4.8 0-5.7 3.8-11.5 7.7-17.2 11.5L5.2 29C3 30.4.1 31.8 0 34.8c-.1 3.3 0 6.7 0 10v16c0 2.9-.6 6.3 2.1 8.1 6.4 4.4 12.9 8.6 19.4 12.9 8 5.3 16 10.7 24 16 2.2 1.5 4.4 3.1 7.1 1.3 2.3-1.5 4.5-3 6.8-4.5 8.9-5.9 17.8-11.9 26.7-17.8l9.9-6.6c.6-.4 1.3-.8 1.9-1.3 1.4-1 2-2.4 2-4.1V37.3c.1-1.1.2-2.1.1-3.1 0-.1 0 .2 0 0zM54.3 12.3L88 34.8 73 44.9 54.3 32.4V12.3zm-8.6 0v20L27.1 44.8 12 34.8l33.7-22.5zM8.6 42.8L19.3 50 8.6 57.2V42.8zm37.1 44.9L12 65.2l15-10.1 18.6 12.5v20.1zM50 60.2L34.8 50 50 39.8 65.2 50 50 60.2zm4.3 27.5v-20l18.6-12.5 15 10.1-33.6 22.4zm37.1-30.5L80.7 50l10.8-7.2-.1 14.4z"></path></svg>
+	</a>
+	<div class="sg-sublogo">Styleguide</div>
+</div>
+
+<!-- Main tabs -->
+<div class="sg-main-content">
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane fade in active" id="sg-introduction">
+			<h1 class="h1">Introduction</h1>
+			<p class="lead">Welcome to our styleguide !</p>
+			<p>It provide base styles and all the HTML (Twig) / CSS (SCSS) components used in our website.</p>
+			<p>A styleguide fosters and offers many advantages :</p>
+			<ul>
+				<li>consistency and logic in visual identity, leading to a better UX;</li>
+				<li>fast and easy component testing and prototyping;</li>
+				<li>better and more methodical workflow with easier modular components design and faster view assembly;</li>
+				<li>extensible and scalable as much as you want, for improved functionalities or new views;</li>
+				<li>common system vocabulary and basis definition, facilitating communication to all the actors, team members as well as clients;</li>
+				<li>facilitate the arrival of new designers and developpers in the project.</li>
+			</ul>
+			<p>This styleguide is mobile responsive and has cross-browser support (we no longer support IE 9 or lower), built on top of <a href="https://github.com/twbs/bootstrap-sass" target="_blank" title="Bootstrap sass">Bootsrap Sass</a>, the official port of <a href="http://getbootstrap.com/" target="_blank" title="Bootstrap sass">Bootstrap 3</a>.</p>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-code-guidelines">
+			<h2 class="h2">Code guidelines</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-no-grid">
+			<h2 class="h2">No grid</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-basic-grid">
+			<h2 class="h2">Basic grid</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-content-grid">
+			<h2 class="h2">Content grid</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-split-grid">
+			<h2 class="h2">Split grid</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-headings">
+			<h2 class="h2">Headings</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-texts">
+			<h2 class="h2">Texts</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-links-highlights">
+			<h2 class="h2">Links and highlights</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-basic-buttons">
+			<h2 class="h2">Basic buttons</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-rounded-buttons">
+			<h2 class="h2">Rounded buttons</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-tab-buttons">
+			<h2 class="h2">Tab buttons</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-text-inputs">
+			<h2 class="h2">Text inputs</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-select">
+			<h2 class="h2">Select</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-textarea">
+			<h2 class="h2">Textarea</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-checkboxes-radio">
+			<h2 class="h2">Checkboxes and Radio</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-file-input">
+			<h2 class="h2">File input</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-error-messages">
+			<h2 class="h2">Error messages</h2>
+		</div>
+		<div role="tabpanel" class="tab-pane fade" id="sg-test">
+			<h2 class="h2">Test</h2>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.js" data-manual></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var highlightScope = document.getElementsByClassName('language-markup'),
+			highlightScopeLen = highlightScope.length;
+		function escapeHtml(string) {
+			var escaped = {
+				'&': '&amp;',
+				'<': '&lt;',
+				'>': '&gt;',
+				"'": '&#39;',
+				'"': '&quot;',
+				'	': ' '
+			};
+			return string.replace(/[&<>'"	]/g, function(character) {
+				return escaped[character];
+			});
+		}
+		for (var i = 0; i < highlightScopeLen; i++) {
+			var innerHTML = highlightScope[i].innerHTML,
+				newInnerHTML = escapeHtml(innerHTML);
+			highlightScope[i].innerHTML = newInnerHTML;
+		}
+		Prism.highlightAll();
+	});
+</script>

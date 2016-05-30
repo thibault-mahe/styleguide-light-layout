@@ -1,0 +1,239 @@
+// Styleguide
+// --------------------------
+
+//Header
+.styleguide {
+	.svg-logo {
+		height: 50px;
+		display: block;
+		margin: 0 auto 10px;
+	}
+	.sg-sublogo {
+		font-size: 0.625rem;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		color: $sg-black-title;
+		text-align: center;
+	}
+	a {
+		transition: color 0.2s;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+	.color {
+		font-size: 16px;
+		text-transform: capitalize;
+		margin-bottom: 10px;
+		width: 100%;
+		height: 50px;
+		text-transform: none;
+		&:before {
+			content: ' ';
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 4px;
+			float: left;
+			margin-right: 10px;
+			border: 1px solid $black;
+		}
+		//Colors
+		&.color-bkg-white:before { background: $white; }
+		//...
+	}
+	.sg-h2 {
+		margin-top: 0;
+		margin-bottom: 40px;
+		color: $blue;
+	}
+	hr {
+		margin: 60px 0 50px;
+	}
+	pre {
+		padding: 0 15px;
+	}
+	code {
+		color: $blue;
+	}
+}
+
+//Header mobile
+.sg-mobile-header {
+	padding: 20px 0;
+	border-bottom: 1px solid $sg-grey-border;
+	background: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	transform: translateX(0);
+	transition: transform 0.4s;
+	display: block;
+	@media (min-width: $screen-sm-min) {
+		display: none;
+	}
+	.sg-menu-burger {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 20px;
+		span {
+			display: block;
+			height: 2px;
+			width: 20px;
+			background: $blue;
+			border-radius: 2px;
+			position: absolute;
+			left: 10px;
+			transition: transform 0.8s, opacity 0.2s;
+			&:nth-child(1) {
+				top: 21px;
+				transform: translateY(-7px);
+			}
+			&:nth-child(2) {
+				top: 21px;
+			}
+			&:nth-child(3) {
+				top: 21px;
+				transform: translateY(7px);
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			span {
+				background: darken($blue, 15%);
+			}
+		}
+	}
+}
+
+//Aside
+.sg-aside {
+	border-right: 1px solid $sg-grey-border;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 280px;
+	height: 100%;
+	background: white;
+	overflow: hidden;
+	@media (min-width: $screen-sm-min) {
+		width: 30%;
+		z-index: 1;
+	}
+	@media (min-width: $screen-lg-min) {
+		width: 20%;
+	}
+	.sg-aside__overflow {
+		height: 100%;
+		overflow: auto;
+	}
+}
+
+.sg-aside__header {
+	padding: 40px 0;
+	border-bottom: 1px solid $sg-grey-border;
+	position: relative;
+	display: none;
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}
+
+.sg-aside__nav {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li {
+		a {
+			padding: 15px 40px 15px 15px;
+			display: block;
+			border-bottom: 1px solid $sg-grey-border;
+			color: $sg-black-title;
+			position: relative;
+			font-size: 1.2rem;
+			.collapse-caret {
+				fill: $sg-black-text;
+				position: absolute;
+				right: 30px;
+				top: 50%;
+				transform: translateY(-50%) rotate(0);
+				transition: transform 0.4s;
+			}
+			&.open {
+				.collapse-caret {
+					transform: translateY(-50%) rotate(-540deg);
+				}
+			}
+		}
+	}
+}
+
+.sg-aside__subnav {
+	padding: 0;
+	list-style: none;
+	background: $sg-grey-background;
+	border-bottom: 1px solid $sg-grey-border;
+	li {
+		a {
+			padding: 10px 40px;
+			border: none;
+			color: $sg-black-text;
+			font-size: 1rem;
+			&:hover {
+				color: darken($sg-black-text, 15%);
+			}
+		}
+		&.active {
+			a {
+				color: $blue;
+			}
+		}
+	}
+}
+
+//Main content
+.sg-main-content {
+	min-height: 100vh;
+	background: white;
+	transform: translateX(0);
+	transition: transform 0.4s;
+	.sg-section {
+		padding: 40px + $sg-aside-header-mobile 40px 40px 40px;
+		@media (min-width: $screen-sm-min) {
+			padding: 80px 80px 80px calc(30% + 80px);
+		}
+		@media (min-width: $screen-lg-min) {
+			padding: 80px 80px 80px calc(20% + 80px);
+		}
+	}
+}
+
+//Mobile behavior
+.sg-menu-is-open {
+	overflow: hidden;
+	.sg-menu-burger {
+		span {
+			&:nth-child(1) {
+				transform: translateY(0) rotate(45deg);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: translateY(0) rotate(-45deg);
+			}
+		}
+	}
+	.sg-mobile-header,
+	.sg-main-content {
+		transform: translateX(280px);
+		overflow: hidden;
+	}
+}
