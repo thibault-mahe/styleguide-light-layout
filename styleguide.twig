@@ -1,9 +1,10 @@
-<!--
+{% extends 'layout.layout-styleguide' %}
 
-	To add in the <head> :
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css">
+{% set title = "Styleguide | " %}
+{% set context = "styleguide" %}
+{% set viewClass = "view-styleguide" %}
 
--->
+{% block content %}
 <aside class="sg-aside js-sg-menu">
 	<div class="sg-aside__overflow">
 		<!-- Aside Header -->
@@ -160,100 +161,114 @@
 <div class="sg-main-content">
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane fade in active" id="sg-introduction">
-			<h1 class="h1">Introduction</h1>
-			<p class="lead">Welcome to our styleguide !</p>
-			<p>It provide base styles and all the HTML (Twig) / CSS (SCSS) components used in our website.</p>
-			<p>A styleguide fosters and offers many advantages :</p>
-			<ul>
-				<li>consistency and logic in visual identity, leading to a better UX;</li>
-				<li>fast and easy component testing and prototyping;</li>
-				<li>better and more methodical workflow with easier modular components design and faster view assembly;</li>
-				<li>extensible and scalable as much as you want, for improved functionalities or new views;</li>
-				<li>common system vocabulary and basis definition, facilitating communication to all the actors, team members as well as clients;</li>
-				<li>facilitate the arrival of new designers and developpers in the project.</li>
-			</ul>
-			<p>This styleguide is mobile responsive and has cross-browser support (we no longer support IE 9 or lower), built on top of <a href="https://github.com/twbs/bootstrap-sass" target="_blank" title="Bootstrap sass">Bootsrap Sass</a>, the official port of <a href="http://getbootstrap.com/" target="_blank" title="Bootstrap sass">Bootstrap 3</a>.</p>
+			<div class="sg-section">
+				<h1 class="h1">Introduction</h1>
+				<p class="lead">Welcome to our styleguide !</p>
+				<p>It provide base styles and all the HTML (Twig) / CSS (SCSS) components used in our website.</p>
+				<p>A styleguide fosters and offers many advantages :</p>
+				<ul>
+					<li>consistency and logic in visual identity, leading to a better UX;</li>
+					<li>fast and easy component testing and prototyping;</li>
+					<li>better and more methodical workflow with easier modular components design and faster view assembly;</li>
+					<li>extensible and scalable as much as you want, for improved functionalities or new views;</li>
+					<li>common system vocabulary and basis definition, facilitating communication to all the actors, team members as well as clients;</li>
+					<li>facilitate the arrival of new designers and developpers in the project.</li>
+				</ul>
+				<p>This styleguide is mobile responsive and has cross-browser support (we no longer support IE 9 or lower), built on top of <a href="https://github.com/twbs/bootstrap-sass" target="_blank" title="Bootstrap sass">Bootsrap Sass</a>, the official port of <a href="http://getbootstrap.com/" target="_blank" title="Bootstrap sass">Bootstrap 3</a>.</p>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-code-guidelines">
-			<h2 class="h2">Code guidelines</h2>
+			<div class="sg-section">
+				<h2 class="h2">Code guidelines</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-no-grid">
-			<h2 class="h2">No grid</h2>
+			<div class="sg-section">
+				<h2 class="h2">No grid</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-basic-grid">
-			<h2 class="h2">Basic grid</h2>
+			<div class="sg-section">
+				<h2 class="h2">Basic grid</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-content-grid">
-			<h2 class="h2">Content grid</h2>
+			<div class="sg-section">
+				<h2 class="h2">Content grid</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-split-grid">
-			<h2 class="h2">Split grid</h2>
+			<div class="sg-section">
+				<h2 class="h2">Split grid</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-headings">
-			<h2 class="h2">Headings</h2>
+			<div class="sg-section">
+				<h2 class="h2">Headings</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-texts">
-			<h2 class="h2">Texts</h2>
+			<div class="sg-section">
+				<h2 class="h2">Texts</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-links-highlights">
-			<h2 class="h2">Links and highlights</h2>
+			<div class="sg-section">
+				<h2 class="h2">Links and highlights</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-basic-buttons">
-			<h2 class="h2">Basic buttons</h2>
+			<div class="sg-section">
+				<h2 class="h2">Basic buttons</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-rounded-buttons">
-			<h2 class="h2">Rounded buttons</h2>
+			<div class="sg-section">
+				<h2 class="h2">Rounded buttons</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-tab-buttons">
-			<h2 class="h2">Tab buttons</h2>
+			<div class="sg-section">
+				<h2 class="h2">Tab buttons</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-text-inputs">
-			<h2 class="h2">Text inputs</h2>
+			<div class="sg-section">
+				<h2 class="h2">Text inputs</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-select">
-			<h2 class="h2">Select</h2>
+			<div class="sg-section">
+				<h2 class="h2">Select</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-textarea">
-			<h2 class="h2">Textarea</h2>
+			<div class="sg-section">
+				<h2 class="h2">Textarea</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-checkboxes-radio">
-			<h2 class="h2">Checkboxes and Radio</h2>
+			<div class="sg-section">
+				<h2 class="h2">Checkboxes and Radio</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-file-input">
-			<h2 class="h2">File input</h2>
+			<div class="sg-section">
+				<h2 class="h2">File input</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-error-messages">
+		<div class="sg-section">
 			<h2 class="h2">Error messages</h2>
+			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane fade" id="sg-test">
+		<div class="sg-section">
 			<h2 class="h2">Test</h2>
+			</div>
 		</div>
 	</div>
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.js" data-manual></script>
-<script>
-	document.addEventListener("DOMContentLoaded", function(event) {
-		var highlightScope = document.getElementsByClassName('language-markup'),
-			highlightScopeLen = highlightScope.length;
-		function escapeHtml(string) {
-			var escaped = {
-				'&': '&amp;',
-				'<': '&lt;',
-				'>': '&gt;',
-				"'": '&#39;',
-				'"': '&quot;',
-				'	': ' '
-			};
-			return string.replace(/[&<>'"	]/g, function(character) {
-				return escaped[character];
-			});
-		}
-		for (var i = 0; i < highlightScopeLen; i++) {
-			var innerHTML = highlightScope[i].innerHTML,
-				newInnerHTML = escapeHtml(innerHTML);
-			highlightScope[i].innerHTML = newInnerHTML;
-		}
-		Prism.highlightAll();
-	});
-</script>
+{% endblock %}
+
