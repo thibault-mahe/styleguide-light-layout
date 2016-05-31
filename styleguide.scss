@@ -9,7 +9,7 @@
 		margin: 0 auto 10px;
 	}
 	.sg-sublogo {
-		font-size: 0.625rem;
+		font-size: 10px;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		color: $sg-black-title;
@@ -157,7 +157,7 @@
 			border-bottom: 1px solid $sg-grey-border;
 			color: $sg-black-title;
 			position: relative;
-			font-size: 1.2rem;
+			font-size: 20px;
 			.collapse-caret {
 				fill: $sg-black-text;
 				position: absolute;
@@ -185,7 +185,7 @@
 			padding: 10px 40px;
 			border: none;
 			color: $sg-black-text;
-			font-size: 1rem;
+			font-size: 16px;
 			&:hover {
 				color: darken($sg-black-text, 15%);
 			}
