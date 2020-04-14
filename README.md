@@ -1,4 +1,4 @@
-## Styleguide light layout
+## Styleguide light layout 
 
 Ready to copy / paste in a project :
 
